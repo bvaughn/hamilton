@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import * as d3 from 'd3';
 import isMobile from 'ismobilejs';
+import createClass from 'create-react-class';
 
 import Visualization from './visualizations/Visualization';
 import LineHover from './LineHover';
@@ -39,7 +40,7 @@ var prevSection = null;
 var currentSection = null;
 var sections = SectionsData(width, vizWidth, sectionWidth, images, isMobilePhone);
 
-var App = React.createClass({
+var App = createClass({ displayName: 'App',
 
   getInitialState() {
 

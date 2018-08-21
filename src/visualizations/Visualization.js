@@ -7,6 +7,7 @@ import isMobile from 'ismobilejs';
 import Lines from './Lines';
 import Diamonds from './Diamonds';
 import Songs from './Songs';
+import createClass from 'create-react-class';
 
 var sf = isMobile.phone ? 1 : 2;
 var duration = 300;
@@ -15,7 +16,7 @@ var simulation = d3.forceSimulation()
   .force('x', d3.forceX().x(d => d.focusX))
   .force('y', d3.forceY().y(d => d.focusY));
 
-var Visualization = React.createClass({
+var Visualization = createClass({ displayName: 'Visualization',
 
   shouldComponentUpdate(nextProps) {
     // update is true when we've entered a new section or interacted with the filter

@@ -1,11 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import * as d3 from "d3";
+import createClass from 'create-react-class';
 
 var borderRadius = 3;
 var gray = '#aaa';
 
-var Hover = React.createClass({
+var Hover = createClass({ displayName: 'Hover',
 
   render() {
     if (_.isEmpty(this.props.hovered)) {

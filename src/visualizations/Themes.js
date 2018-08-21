@@ -1,11 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import * as d3 from 'd3';
+import createClass from 'create-react-class';
 
 import Hover from '../Hover';
 
 var fontSize = 12;
-var Themes = React.createClass({
+var Themes = createClass({ displayName: 'Themes',
   getInitialState() {
     return {
       hovered: null,
